@@ -1,0 +1,290 @@
+body {
+	background: #FFFFFF url(leftPan.png) left top repeat-y;
+	font: 14px Arial, Helvetica, sans-serif;
+	color: #232323;
+	margin: 0;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+/*--------------------------------------------------------------*/
+#headerPan {
+	background: #FF8243 url(header.png) 0 65px repeat-x;
+	height: 80px;
+	padding: 10px;
+}
+
+#headerPan h1 {
+	font-size: 125%;
+	margin: 0 0 10px 0;
+}
+
+#headerPan a.logo {
+	background: transparent url(logo.png) left top no-repeat;
+	width: 330px;
+	height: 80px;
+	float: left;
+}
+
+#headerPan a.logo span {
+	display: none;
+}
+
+#headerPan ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#headerPan li {
+	background: transparent url(bullet_orange.png) left top no-repeat;
+	float: left;
+	margin-left: 4px;
+	padding: 0 0 0 20px;
+	line-height: 19px;
+}
+
+#headerPan li.first {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+#headerPan ul li a {
+	color: #1A4876;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+#headerPan ul li a:HOVER {
+	color: #199EBD;
+	text-decoration: underline;
+}
+
+#headerPan ul li a img {
+	padding: 0;
+	mnargin: 0;
+	border: none;
+}
+
+#headerPan ul li a span {
+	position: relative;
+	top: -2px;
+}
+
+#headerPan .headerlink {
+	float: right;
+	margin: -10px 0 0 0;
+	font-size: 75%;
+	line-height: 16px;
+	text-align: right;
+}
+
+#headerPan .login {
+	background: transparent url(lock.png) left top no-repeat;
+	padding: 2px 0 0 18px;
+}
+
+/*--------------------------------------------------------------*/
+#bodyPan {
+	padding: 10px 10px 10px 220px;
+}
+
+#bodyPan table {
+	border-collapse: collapse;
+	border: 1px solid #DBD7D2;
+}
+
+#bodyPan table caption {
+	font-size: 200%;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+#bodyPan table th {
+	background: #EDEDED url(th.png) top left repeat-x;
+	padding: 2px 6px;
+	height: 20px;
+	text-align: left;
+}
+
+#bodyPan table td {
+	padding: 8px;
+	text-align: left;
+	border-left: 1px dotted #EDEDED;
+}
+
+#bodyPan table td a {
+	text-decoration: none;
+	color: #A83800;
+}
+
+#bodyPan table td a:HOVER {
+	text-decoration: underline;
+	color: #DB4900;
+}
+
+#bodyPan form p {
+	margin: 10px 0 10px 0;
+}
+
+#bodyPan form div {
+	background: #F5F5F5 url(th.png) left top repeat-x;
+	border: 1px solid #DBD7D2;
+}
+
+#bodyPan form fieldset {
+	float: left;
+	border: none;
+	margin: 0 10px 0 10px;
+	padding: 10px;
+}
+
+#bodyPan input,#bodyPan textarea,#bodyPan select {
+	border: 1px solid #DBD7D2;
+	margin-right: 5px;
+	padding: 2px;
+	margin: 0;
+}
+
+#bodyPan input {
+	width: 200px;
+}
+
+#bodyPan input.date-pick {
+	width: 150px;
+}
+
+#bodyPan select {
+	width: 206px;
+}
+
+#bodyPan textarea {
+	width: 450px;
+	height: 140px;	
+}
+
+#bodyPan input[readonly] {
+	background: #EDEDED;
+}
+
+#bodyPan input.submit {
+	background: #B0B7C6 url(tick.png) 2px 2px no-repeat;
+	border: 1px solid #1A4876;
+	padding: 2px 4px 2px 20px;
+	margin-right: 10px;
+	width: 120px;
+}
+
+#bodyPan input.reset {
+	background: #B0B7C6 url(cross.png) 2px 2px no-repeat;
+	border: 1px solid #1A4876;
+	padding: 2px 4px 2px 20px;
+	margin-right: 10px;
+	width: 120px;
+}
+
+#bodyPan input.submit:HOVER,#bodyPan input.reset:HOVER {
+	background-color: #9ACEEB;
+}
+
+#bodyPan form .buttons {
+	clear: both;
+	margin: 0 10px 0 10px;
+	padding: 10px;
+}
+
+#bodyPan form span.error {
+	color: #C8385A;
+	font-size: 75%;
+}
+
+#bodyPan form label.error {
+	color: #C8385A;
+}
+
+#bodyPan form label.required {
+	background: transparent url(bullet_star.png) right top no-repeat;
+	padding-right: 16px;
+}
+
+#bodyPan form input.error,#bodyPan form textarea.error,#bodyPan form select.error {
+	background: #FAEBEE url(exclamation.png) top right no-repeat;
+	border: 1px solid #C8385A;
+}
+
+#bodyPan p.required {
+	background: transparent url(bullet_star.png) left top no-repeat;
+	padding-left: 16px;
+	font-size: 90%;
+}
+
+#bodyPan div.error {
+	background: #FAEBEE url(exclamation.png) 2px 3px no-repeat;
+	color: #C8385A;
+	border: 1px solid #C8385A;
+	padding: 4px 4px 4px 24px;
+	margin-top: 10px;
+}
+
+#bodyPan div.messages {
+	background: #C3E2F3 url(email_open.png) 2px 3px no-repeat;
+	color: #1A4876;
+	border: 1px solid #1A4876;
+	padding: 4px 4px 4px 24px;
+	margin-top: 10px;
+}
+
+#bodyPan div.error ul, #bodyPan div.messages ul {
+	margin: 0;
+	padding: 0;
+}
+
+#bodyPan div.error li, #bodyPan div.messages li {
+	padding: 1px 0;
+}
+/*--------------------------------------------------------------*/
+#leftPan {
+	float: left;
+	margin-left: -210px;
+	padding-right: 20px;
+	width: 190px;
+	color: #EDEDED;
+}
+
+#leftPan h1 {
+	font-size: 125%;
+	color: #FAE7B5;
+}
+
+#leftPan ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#leftPan li {
+	background: transparent url(bullet_yellow.png) 0 3px no-repeat;
+	padding: 0 0 0 16px;
+	line-height: 19px;
+}
+
+#leftPan ul li a {
+	color: #ECEABE;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+#leftPan ul li a:HOVER {
+	color: #FDDB6D;
+	text-decoration: underline;
+}
+
+#leftPan div#helpFormItem p {
+	background: transparent url(book_open.png) left top no-repeat;
+	padding-left: 24px;
+}
