@@ -1,4 +1,4 @@
-package cz.aimtec.auxilium.filter;
+package cz.aimtec.auxilium.stripes.filter;
 
 import java.io.IOException;
 import java.util.Base64;
@@ -77,7 +77,6 @@ public class NtlmAuthorizationFilter implements Filter {
 			Member member = new Member();
 			member.setDomain(domain);
 			member.setUsername(username);
-			member.setRole(null);
 			request.setAttribute("member", member);
 			chain.doFilter(req, resp);
 			logger.debug("set attribute <member> " + member.getDetails());
