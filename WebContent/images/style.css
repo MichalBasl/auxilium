@@ -78,7 +78,7 @@ p {
 
 #headerPan .headerlink {
 	float: right;
-	margin: -10px 0 0 0;
+	margin: 40px 0 0 0;
 	font-size: 75%;
 	line-height: 16px;
 	text-align: right;
@@ -95,6 +95,7 @@ p {
 }
 
 #bodyPan table {
+	width: 100%;
 	border-collapse: collapse;
 	border: 1px solid #DBD7D2;
 }

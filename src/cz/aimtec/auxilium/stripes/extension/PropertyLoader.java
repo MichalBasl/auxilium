@@ -30,13 +30,17 @@ public class PropertyLoader implements Interceptor {
 		String path = this.getClass().getClassLoader().getResource("").getPath();
 		logger.debug("path " + path);
 
+		// Locale
+		String lc = context.getActionBeanContext().getRequest().getLocale().toString();
+		logger.debug("locale " + lc.toString());
+
 		// Application properties
 		try {
 			// Read properties
-			String appPropPath = path + "app.properties";
-			logger.debug("read properties file " + appPropPath);
+			String appProp = "Application.properties";
+			logger.debug("read properties file " + appProp);
 			Properties appProperties = new Properties();
-			FileInputStream appInput = new FileInputStream(new File(appPropPath));
+			FileInputStream appInput = new FileInputStream(new File(path + appProp));
 			appProperties.load(appInput);
 			// Add properties to context
 			context.getActionBeanContext().getRequest().setAttribute("appProperties", appProperties);
@@ -44,13 +48,41 @@ public class PropertyLoader implements Interceptor {
 			logger.error("appProperties error - " + eApp.getMessage());
 		}
 
+		// HelpForm properties
+		try {
+			// Read properties
+			String hlpfProp = "HelpFormItems_" + lc + ".properties";
+			logger.debug("read properties file " + hlpfProp);
+			Properties hlpfProperties = new Properties();
+			FileInputStream hlpfInput = new FileInputStream(new File(path + hlpfProp));
+			hlpfProperties.load(hlpfInput);
+			// Add properties to context
+			context.getActionBeanContext().getRequest().setAttribute("hlpfProperties", hlpfProperties);
+		} catch (IOException eHlpf) {
+			logger.error("hlpfProperties error - " + eHlpf.getMessage());
+		}
+
+		// Worker properties
+		try {
+			// Read properties
+			String wrkProp = "workers.properties";
+			logger.debug("read properties file " + wrkProp);
+			Properties wrkProperties = new Properties();
+			FileInputStream wrkInput = new FileInputStream(new File(path + wrkProp));
+			wrkProperties.load(wrkInput);
+			// Add properties to context
+			context.getActionBeanContext().getRequest().setAttribute("wrkProperties", wrkProperties);
+		} catch (IOException eWrk) {
+			logger.error("wrkProperties error - " + eWrk.getMessage());
+		}
+
 		// User properties and member
 		try {
 			// Read properties
-			String userPropPath = path + "user.properties";
-			logger.debug("read properties file " + userPropPath);
+			String userProp = "UsersRole.properties";
+			logger.debug("read properties file " + userProp);
 			Properties userProperties = new Properties();
-			FileInputStream userInput = new FileInputStream(new File(userPropPath));
+			FileInputStream userInput = new FileInputStream(new File(path + userProp));
 			userProperties.load(userInput);
 			// Add role to member
 			Member member = (Member) context.getActionBeanContext().getRequest().getAttribute("member");

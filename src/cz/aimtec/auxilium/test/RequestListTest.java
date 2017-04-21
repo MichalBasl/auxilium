@@ -1,11 +1,9 @@
 package cz.aimtec.auxilium.test;
 
-import java.util.List;
-
-import org.json.JSONArray;
-
 import cz.aimtec.auxilium.object.Request;
 import cz.aimtec.auxilium.object.RequestList;
+import java.util.List;
+import org.json.JSONArray;
 
 public class RequestListTest {
 
@@ -16,7 +14,7 @@ public class RequestListTest {
 
 		RequestList rqLst = new RequestList();
 		rqLst.setRequestListFromJSON(json);
-		
+
 		List<Request> rql = rqLst.getRequestList();
 
 		System.out.println(rql.size());
