@@ -68,15 +68,17 @@ public class NtlmAuthorizationFilter implements Filter {
 					length = msg[off + 9] * 256 + msg[off + 8];
 					offset = msg[off + 11] * 256 + msg[off + 10];
 					username = convertString(new String(msg, offset, length));
+
+					if (request.getAttribute("member") == null) {
+						Member member = new Member();
+						member.setDomain(domain);
+						member.setUsername(username);
+						request.setAttribute("member", member);
+						chain.doFilter(req, resp);
+						logger.debug("set attribute <member> " + member.getDetails());
+					}
 				}
 			}
-
-			Member member = new Member();
-			member.setDomain(domain);
-			member.setUsername(username);
-			request.setAttribute("member", member);
-			chain.doFilter(req, resp);
-			logger.debug("set attribute <member> " + member.getDetails());
 
 		} catch (Exception e) {
 			System.out.println(e);

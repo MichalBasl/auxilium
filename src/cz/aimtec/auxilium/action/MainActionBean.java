@@ -15,7 +15,6 @@ public class MainActionBean implements ActionBean {
 
 	private Member member;
 	private String formItem;
-	private Properties appProperties;
 	private Properties hlpfProperties;
 	private ActionBeanContext context;
 
@@ -31,11 +30,8 @@ public class MainActionBean implements ActionBean {
 	@Override
 	public void setContext(ActionBeanContext cntx) {
 		member = (Member) cntx.getRequest().getAttribute("member");
-		appProperties = (Properties) cntx.getRequest().getAttribute("appProperties");
 		hlpfProperties = (Properties) cntx.getRequest().getAttribute("hlpfProperties");
 		logger.debug("member=" + member.getDetails());
-		logger.debug("api=" + appProperties.getProperty("api.protocol") + "://" + appProperties.getProperty("api.host")
-				+ ":" + appProperties.getProperty("api.port") + appProperties.getProperty("api.base"));
 		context = cntx;
 	}
 
